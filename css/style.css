@@ -1,0 +1,491 @@
+/* CSS reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+img{
+	max-width: 100%;
+	height: auto;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/* CSS reset */
+/* layout start */
+body{
+	background: #efe9e7;
+	font-size: 16px;
+	line-height: 1.4;
+}
+.header{
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.75);
+	position: fixed;
+	z-index: 10;
+}
+.headerContent{
+    max-width: 1024px;
+    margin: 0 auto;
+}
+@media(max-width: 1024px){
+	.headerContent{
+		padding: 0px 20px;
+	}
+}
+.topLogo{
+	background: url(https://hexschool.github.io/Rwd_sketch_export/assets/logo_w@svg.svg) no-repeat;
+	text-indent:101%;
+	overflow:hidden;
+	white-space:nowrap;
+	display:block;
+	float: left;
+	width: 120px;
+	height: 24px;
+	margin-top: 16px;
+}
+.menu{
+	float: right;
+	display: flex;
+}
+.menu li a{
+	display: block;
+	color: white;
+	padding: 18px 15px;
+	text-decoration: none;
+	border-bottom: 2px solid transparent; /* transparent 透明 */
+}
+.menu li a:hover{
+	font-weight: bold;
+	border-bottom: 2px solid white;
+}
+.fa-bars {
+	display: none;
+	font-size: 24px;
+	color: #fff;
+}
+@media (max-width: 576px) {
+	.menu{
+		display: block;
+		position: absolute;
+		top: 60px;
+		left: 0;
+		right: 0;
+		height: 0;
+		text-align: center;
+		overflow: hidden;
+		transition: all 0.8s;
+	}
+	.menu li{
+		float: none;
+	}
+	.fa-bars {
+		display: block;
+		float: right;
+		padding: 18px 15px;
+	  }
+  }
+.showMenu{
+	height: 182px;
+	background: rgba(0, 0, 0, 0.75);
+	transition: all 0.8s;
+}
+
+.banner{
+	background: url(https://hexschool.github.io/Rwd_sketch_export/assets/header_desktop.png) no-repeat 50%;
+	background-size: cover;
+	height: 420px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 30px;
+}
+@media(max-width: 576px){
+	.banner{
+		background: url(https://hexschool.github.io/Rwd_sketch_export/assets/header_mobile.png) no-repeat;
+	}
+}
+.bannerContent{
+	width: 460px;
+	height: 152px;
+	background-color: rgba(0, 0, 0, 0.35);
+	color: white;
+	text-align: center;
+	padding: 20px;
+}
+h1{
+	font-size: 36px;
+	margin-bottom: 16px;
+}
+
+.footer{
+	width: 100%;
+	padding: 50px 0px;
+}
+.footerContent{
+	max-width: 1024px;
+    margin: 0 auto;
+	display: flex;
+	color: #3D1101;
+}
+@media(max-width: 1024px){
+	.footerContent{
+		padding: 0px 20px;
+	}
+}
+.about{
+	width: 33%;
+}
+h2{
+	font-size: 24px;
+	margin-bottom: 16px;
+}
+.about p{
+	width: 99%;
+	margin-right: 20px;
+}
+.contact{
+	width: 33%;
+}
+.contact ul li{
+	list-style: disc inside;
+}
+.link{
+	width: 33%;
+	display: flex;
+	flex-direction: column;
+	align-items: end;
+}
+.footerLogo{
+	background: url(https://hexschool.github.io/Rwd_sketch_export/assets/logo_l@svg.svg) no-repeat;
+	text-indent: 101%;
+	overflow: hidden;
+	white-space: nowrap;
+	display:block;
+	width: 244px;
+	height: 49px;
+	margin-bottom: 22px;
+}
+.fa-brands{
+	font-size: 36px;
+	text-decoration: none;
+	margin-left: 12px;
+}
+.fa-square-google-plus{
+	color: #DB4437;
+}
+.fa-square-twitter{
+	color: #41ABE1;
+}
+.fa-square-facebook{
+	color: #3A5795;
+}
+@media(max-width: 768px){
+	.footerContent{
+		flex-direction: column;
+		align-items: center;
+	}
+	.about{
+		width: 100%;
+	}
+	.contact{
+		width: 100%;
+		margin-top: 30px;
+	}
+	.link{
+		width: 100%;
+		margin-top: 30px;
+	}
+}
+/* layout end */
+/* index start */
+.feature{
+	max-width: 1024px;
+    margin: 0 auto;
+	color: #3D1101;
+}
+@media(max-width: 1024px){
+	.feature{
+		padding: 0px 20px;
+	}
+}
+h3{
+	font-size: 20px;
+	text-align: center;
+	position: relative;
+	margin-bottom: 30px;
+}
+.feature h3::before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 24%;
+	width: 10.75%;
+	height: 1px;
+	background: #979797;
+}
+.feature h3::after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	right: 24%;
+	width: 10.75%;
+	height: 1px;
+	background: #979797;
+}
+@media(max-width: 768px){
+	.feature h3::before{
+		left: 20%;
+	}
+	.feature h3::after{
+		right: 20%;
+	}
+}
+@media(max-width: 576px){
+	.feature h3::before{
+		display: none;
+	}
+	.feature h3::after{
+		display: none;
+	}
+}
+.feature ul{
+	display: flex;
+	margin-bottom: 50px;
+}
+.feature ul li{
+	width: 29.46%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.feature ul li img{
+	border-radius: 50%;
+	margin-bottom: 20px;
+}
+h4{
+	font-size: 18px;
+	margin-bottom: 11px;
+}
+.featureCenter{
+	margin: 0% 5.8%;
+}
+@media(max-width: 576px){
+	.feature ul{
+		flex-direction: column;
+		align-items: center;
+	}
+	.feature ul li{
+		width: 100%;
+		margin-bottom: 30px;
+	}
+}
+
+.chef{
+	background: #3D1101;
+	margin-bottom: 50px;
+}
+.chefContent{
+	max-width: 1024px;
+    margin: 0 auto;
+	color: #EFE9E7;
+	display: flex;
+}
+@media(max-width: 1024px){
+	.chefContent{
+		padding: 0px 20px;
+	}
+}
+.chefContent img{
+	width: 50%;
+}
+.chefIntroduction{
+	margin: 81px 0px 50px 25px;
+}
+h5{
+	font-size: 20px;
+}
+@media(max-width: 576px){
+	.chefContent{
+		flex-direction: column;
+		align-items: center;
+	}
+	.chefContent img{
+		width: 95%;
+	}
+	.chefIntroduction{
+		margin: 30px 0px;
+	}
+}
+
+.think{
+	max-width: 1024px;
+    margin: 0 auto;
+	color: #3D1101;
+	margin-bottom: 50px;
+}
+.think h2{
+	text-align: center;
+	margin-bottom: 32px;
+}
+.comment ul{
+	display: flex;
+	justify-content: space-around;
+}
+.comment ul li{
+	width: 30%;
+	display: flex;
+	align-items: flex-start;
+}
+@media(max-width: 576px){
+	.think{
+		padding: 0px 20px;
+	}
+	.comment ul{
+		flex-direction: column;
+		justify-content: center;
+	}
+	.comment ul li{
+		width: 100%;
+	}
+}
+.comment ul li img{
+	border-radius: 50%;
+	margin-right: 13px;
+}
+.commentContent h4{
+	margin: 19px 0px 22px 0px;
+}
+.commentContent span{
+	display: block;
+	text-align: right;
+	color: rgba(61, 17, 0, 0.75);
+}
+
+.booking{
+	background: rgba(250, 250, 250, 0.7);
+	padding: 50px 0px;
+}
+.bookingBackground{
+	max-width: 1024px;
+    margin: 0 auto;
+	color: #3D1101;
+}
+@media(max-width: 1024px){
+	.bookingBackground{
+		padding: 0px 20px;
+	}
+}
+.bookingBackground h2{
+	text-align: center;
+	margin-bottom: 32px;
+}
+.bookingContent{
+	display: flex;
+}
+.bookingContent img{
+	width: 49.025%;
+	margin-right: 20px;
+}
+.bookingContent form{
+	width: 49.025%;
+	display: flex;
+	flex-direction: column;
+}
+.bookingContent form label{
+	font-size: 14px;
+	margin-bottom: 6px;
+}
+.bookingContent form input{
+	background: #FFFFFF;
+	border: 1px solid #CCCCCC;
+	box-shadow: inset 0px 1px 0px 0px #ECECEC;
+	border-radius: 3px;
+	padding: 5px 0px 5px 14px;
+	margin-bottom: 12px;
+}
+.bookingContent form input:focus{
+	background: #bfe3f4;
+}
+.button{
+	text-align: end;
+	margin-top: 80px;
+}
+.button button{
+	width: 70px;
+	height: 32px;
+	padding: 5px 0px;
+	border: none;
+	color: white;
+}
+.cancel{
+	background: rgba(0,0,0,0.35);
+	border-radius: 3px;
+	margin-right: 11px;
+}
+.cancel:hover{
+	background: rgba(0, 0, 0, 0.155);
+}
+.send{
+	background: #F56C23;
+	border-radius: 3px;
+}
+.send:hover{
+	background: #f56d2391;
+}
+@media(max-width: 576px){
+	.bookingContent{
+		flex-direction: column;
+		align-items: center;
+	}
+	.bookingContent img{
+		width: 100%;
+		margin: 0px 0px 30px 0px;
+	}
+	.bookingContent form{
+		width: 100%;
+	}
+}
+/* index end */
+/* cart start */
+/* cart end */
